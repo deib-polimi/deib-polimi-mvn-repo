@@ -84,7 +84,7 @@
 				<version>2.8.1</version>
 				<configuration>
 					<altDeploymentRepository>internal-repo::default::file://${project.build.directory}/mvn-repo/releases</altDeploymentRepository>
-					<altDeploymentRepository>internal-snapshot-repo::default::file://${project.build.directory}/mvn-repo/snapshots</altDeploymentRepository>
+					<!-- <altDeploymentRepository>internal-snapshot-repo::default::file://${project.build.directory}/mvn-repo/snapshots</altDeploymentRepository> -->
 				</configuration>
 			</plugin>
 			<plugin>
