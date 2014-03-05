@@ -5,26 +5,26 @@
   <version>1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20140304.145549</timestamp>
+      <timestamp>20140305.091637</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20140304145549</lastUpdated>
+    <lastUpdated>20140305091637</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20140304.145549-1</value>
-        <updated>20140304145549</updated>
+        <value>1.0-20140305.091637-1</value>
+        <updated>20140305091637</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20140304.145549-1</value>
-        <updated>20140304145549</updated>
+        <value>1.0-20140305.091637-1</value>
+        <updated>20140305091637</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>1.0-20140304.145549-1</value>
-        <updated>20140304145549</updated>
+        <value>1.0-20140305.091637-1</value>
+        <updated>20140305091637</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
