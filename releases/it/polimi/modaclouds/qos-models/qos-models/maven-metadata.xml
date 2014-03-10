@@ -3,10 +3,10 @@
   <groupId>it.polimi.modaclouds.qos-models</groupId>
   <artifactId>qos-models</artifactId>
   <versioning>
-    <release>1.0-alpha</release>
+    <release>1.0</release>
     <versions>
-      <version>1.0-alpha</version>
+      <version>1.0</version>
     </versions>
-    <lastUpdated>20140305095246</lastUpdated>
+    <lastUpdated>20140310155541</lastUpdated>
   </versioning>
 </metadata>
