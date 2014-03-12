@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.csparqool</groupId>
+  <artifactId>csparqool</artifactId>
+  <versioning>
+    <versions>
+      <version>0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20140312181711</lastUpdated>
+  </versioning>
+</metadata>
