@@ -37,6 +37,8 @@
 
 	<properties>
 		<github.global.server>github</github.global.server>
+                <github.repository.name>modaclouds-qos-models</github.repository.name>
+                <github.user.name>deib-polimi</github.user.name>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -137,7 +139,7 @@
 						${project.artifactId}:${project.version}</checkinComment>
 					<content>${project.reporting.outputDirectory}/apidocs</content>
 					<skipDeletedFiles>true</skipDeletedFiles>
-					<pubScmUrl>scm:git:git@github.com:deib-polimi/modaclouds-qos-models.git</pubScmUrl>
+					<pubScmUrl>scm:git:git@github.com:${github.user.name}/${github.repository.name}.git</pubScmUrl>
 					<scmBranch>gh-pages</scmBranch> <!-- branch with static site -->
 				</configuration>
 			</plugin>
