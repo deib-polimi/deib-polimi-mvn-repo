@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.modaclouds.monitoring.knowledge-base-api</groupId>
+  <artifactId>knowledge-base-api</artifactId>
+  <versioning>
+    <versions>
+      <version>0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20140326132056</lastUpdated>
+  </versioning>
+</metadata>
