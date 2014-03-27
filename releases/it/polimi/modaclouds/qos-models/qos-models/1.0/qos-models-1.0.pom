@@ -230,7 +230,6 @@
 								<include>commons/*.xsd</include>
 								<include>monitoringrules/*.xsd</include>
 								<include>qosconstraints/*.xsd</include>
-								<include>s4cextension/*.xsd</include>
 							</schemaIncludes>
 							<generatePackage>it.polimi.modaclouds.qos_models.schema</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/jaxb2</generateDirectory>
