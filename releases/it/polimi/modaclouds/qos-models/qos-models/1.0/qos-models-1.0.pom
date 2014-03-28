@@ -72,6 +72,11 @@
 			<artifactId>commons-jxpath</artifactId>
 			<version>1.3</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -230,7 +235,6 @@
 								<include>commons/*.xsd</include>
 								<include>monitoringrules/*.xsd</include>
 								<include>qosconstraints/*.xsd</include>
-								<include>s4cextension/*.xsd</include>
 							</schemaIncludes>
 							<generatePackage>it.polimi.modaclouds.qos_models.schema</generatePackage>
 							<generateDirectory>${project.build.directory}/generated-sources/jaxb2</generateDirectory>
