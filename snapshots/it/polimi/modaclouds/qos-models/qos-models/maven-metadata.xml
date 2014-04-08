@@ -4,8 +4,8 @@
   <artifactId>qos-models</artifactId>
   <versioning>
     <versions>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.1-s4cextension-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140310143836</lastUpdated>
+    <lastUpdated>20140408155510</lastUpdated>
   </versioning>
 </metadata>
