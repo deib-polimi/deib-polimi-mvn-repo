@@ -5,26 +5,26 @@
   <version>1.1-s4cextension-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20140415.150407</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20140416.074828</timestamp>
+      <buildNumber>2</buildNumber>
     </snapshot>
-    <lastUpdated>20140415150407</lastUpdated>
+    <lastUpdated>20140416074828</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.1-s4cextension-20140415.150407-1</value>
-        <updated>20140415150407</updated>
+        <value>1.1-s4cextension-20140416.074828-2</value>
+        <updated>20140416074828</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1-s4cextension-20140415.150407-1</value>
-        <updated>20140415150407</updated>
+        <value>1.1-s4cextension-20140416.074828-2</value>
+        <updated>20140416074828</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>1.1-s4cextension-20140415.150407-1</value>
-        <updated>20140415150407</updated>
+        <value>1.1-s4cextension-20140416.074828-2</value>
+        <updated>20140416074828</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
