@@ -24,7 +24,7 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>MODAClouds Object Store API</name>
+	<name>MODAClouds Metrics ObServer</name>
 	<inceptionYear>2014</inceptionYear>
 
 	<licenses>
@@ -221,6 +221,28 @@
 						<phase>verify</phase>
 						<goals>
 							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>it.polimi.modaclouds.monitoring.metrics_observer.examples.ExampleObServer</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>
