@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.modaclouds.monitoring</groupId>
+  <artifactId>dda-api</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20140520161234</lastUpdated>
+  </versioning>
+</metadata>
