@@ -113,12 +113,6 @@
 			<version>1.0.2</version>
 		</dependency>
 		<dependency>
-			<groupId>it.polimi.modaclouds.monitoring</groupId>
-			<artifactId>object-store-api</artifactId>
-			<version>0.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.1</version>
