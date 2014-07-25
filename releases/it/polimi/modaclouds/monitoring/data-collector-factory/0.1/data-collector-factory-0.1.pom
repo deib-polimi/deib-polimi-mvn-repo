@@ -21,7 +21,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.polimi.modaclouds.monitoring</groupId>
 	<artifactId>data-collector-factory</artifactId>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>MODAClouds Data Collector Factory</name>
 	<inceptionYear>2014</inceptionYear>
 
