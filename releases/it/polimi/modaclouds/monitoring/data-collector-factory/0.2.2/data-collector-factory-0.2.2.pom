@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>it.polimi.modaclouds.monitoring.knowledge-base-api</groupId>
 			<artifactId>knowledge-base-api</artifactId>
-			<version>2.1</version>
+			<version>2.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
