@@ -4,8 +4,8 @@
   <artifactId>data-collector-factory</artifactId>
   <versioning>
     <versions>
-      <version>0.2-SNAPSHOT</version>
+      <version>0.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140828141619</lastUpdated>
+    <lastUpdated>20141008124435</lastUpdated>
   </versioning>
 </metadata>
