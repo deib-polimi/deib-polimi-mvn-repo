@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>it.polimi.modaclouds.space4cloud</groupId>
+  <artifactId>privatecloud</artifactId>
+  <version>0.0.8-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20141031.165743</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20141031165743</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.0.8-20141031.165743-1</value>
+        <updated>20141031165743</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.8-20141031.165743-1</value>
+        <updated>20141031165743</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
