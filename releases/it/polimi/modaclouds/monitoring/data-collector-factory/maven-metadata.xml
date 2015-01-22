@@ -3,10 +3,10 @@
   <groupId>it.polimi.modaclouds.monitoring</groupId>
   <artifactId>data-collector-factory</artifactId>
   <versioning>
-    <release>0.2.2</release>
+    <release>0.3</release>
     <versions>
-      <version>0.2.2</version>
+      <version>0.3</version>
     </versions>
-    <lastUpdated>20141002082306</lastUpdated>
+    <lastUpdated>20150122140242</lastUpdated>
   </versioning>
 </metadata>
