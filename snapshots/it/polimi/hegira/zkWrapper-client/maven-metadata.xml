@@ -4,8 +4,8 @@
   <artifactId>zkWrapper-client</artifactId>
   <versioning>
     <versions>
-      <version>0.0.3-SNAPSHOT</version>
+      <version>0.0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150204160409</lastUpdated>
+    <lastUpdated>20150214105437</lastUpdated>
   </versioning>
 </metadata>
