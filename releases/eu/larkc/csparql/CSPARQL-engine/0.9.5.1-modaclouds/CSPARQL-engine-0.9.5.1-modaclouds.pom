@@ -1,0 +1,300 @@
+<!-- Copyright 2014 Marco Balduini (marco.balduini@polimi.it) Emanuele Della 
+	Valle (emanuele.dellavalle@polimi.it) Davide Barbieri Licensed under the 
+	Apache License, Version 2.0 (the "License"); you may not use this file except 
+	in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. 
+	Acknowledgements: This work was partially supported by the European project 
+	LarKC (FP7-215535) -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>eu.larkc.csparql</groupId>
+	<artifactId>CSPARQL-engine</artifactId>
+	<version>0.9.5.1-modaclouds</version>
+	<packaging>pom</packaging>
+	<name>Multi Module CSPARQL Parent Project</name>
+	<description>This is a mult module project called CSparql: handles continuous streaming data</description>
+	<url>http://streamreasoning.org</url>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<repositories>
+		<repository>
+			<id>streamreasoning_repository</id>
+			<name>streamreasoning repository</name>
+			<url>http://streamreasoning.org/maven/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<properties>
+		<maven.release.skip>false</maven.release.skip>
+		<github.global.server>github</github.global.server>
+	</properties>
+	<modules>
+		<module>csparql-common</module>
+		<module>csparql-cep-api</module>
+		<module>csparql-cep-esper</module>
+		<module>csparql-sparql-api</module>
+		<module>csparql-sparql-jena</module>
+		<module>csparql-sparql-sesame</module>
+		<module>csparql-core</module>
+		<module>csparql-ui</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-cep-api</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-cep-esper</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-common</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-core</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-sparql-api</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-sparql-jena</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-sparql-sesame</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.larkc.csparql</groupId>
+				<artifactId>csparql-ui</artifactId>
+				<version>0.9.5.1-modaclouds</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- <dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven.release</groupId>
+				<artifactId>maven-release</artifactId>
+				<version>2.2.2</version>
+			</dependency> -->
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.2</version>
+			</dependency>
+			<!-- No error, without this, using this gives 1 error -->
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<classifier>javadoc</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<classifier>sources</classifier>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<!-- AVOID RELEASE REPOSITORY/PLUGINREPOSITORY: in POM <repositories></repositories> 
+		<pluginRepositories></pluginRepositories> -->
+	<!-- to solve " PluginVersionResolutionException"> -->
+
+	<developers>
+		<developer>
+			<name>Davide Barbieri</name>
+			<email>dbarbieri@elet.polimi.it</email>
+			<url />
+			<organization>Politecnico Di Milano - Dipartimento di Elettronica e Informazione</organization>
+			<organizationUrl>http://www.dei.polimi.it</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone />
+			<properties>
+				<picUrl />
+			</properties>
+		</developer>
+		<developer>
+			<name>Emanuele Della Valle</name>
+			<email>emanuele.dellavalle@polimi.it</email>
+			<url>http://emanueledellavalle.org/</url>
+			<organization>Politecnico di Milano - Dipartimento di Elettronica e Informazione</organization>
+			<organizationUrl>http://www.dei.polimi.it</organizationUrl>
+			<roles>
+				<role>Assistant Professor</role>
+				<role>developer</role>
+			</roles>
+			<timezone />
+			<properties>
+				<picUrl />
+			</properties>
+		</developer>
+		<developer>
+			<name>Marco Balduini</name>
+			<email>marco.balduini@polimi.it</email>
+			<organization>Politecnico di Milano - Dipartimento di Elettronica e Informazione</organization>
+			<organizationUrl>http://www.dei.polimi.it</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone />
+			<properties>
+				<picUrl />
+			</properties>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Chan Naseeb</name>
+			<email>chan.naseeb@mail.polimi.it</email>
+			<url />
+			<organization />
+			<organizationUrl />
+			<roles>
+				<role>contributor</role>
+			</roles>
+			<timezone />
+			<properties>
+				<gtalk />
+			</properties>
+		</contributor>
+	</contributors>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9.1</version>
+					<configuration>
+						<aggregate>true</aggregate>
+						<show>public</show>
+						<nohelp>true</nohelp>
+						<header>${project.artifactId}, ${project.version}</header>
+						<footer>${project.artifactId}, ${project.version}</footer>
+						<doctitle>${project.artifactId}, ${project.version}</doctitle>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.11</version>
+				<configuration>
+					<merge>true</merge>
+					<message>Maven artifacts for ${project.artifactId}
+						${project.version}</message>
+					<noJekyll>true</noJekyll>
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+					<branch>refs/heads/master</branch>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<repositoryName>deib-polimi-mvn-repo</repositoryName>
+					<repositoryOwner>deib-polimi</repositoryOwner>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>internal-repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>internal-snapshot-repo</id>
+			<name>Temporary Staging Snapshot Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

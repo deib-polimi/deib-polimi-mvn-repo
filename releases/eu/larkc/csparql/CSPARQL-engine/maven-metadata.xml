@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eu.larkc.csparql</groupId>
+  <artifactId>CSPARQL-engine</artifactId>
+  <versioning>
+    <release>0.9.5.1-modaclouds</release>
+    <versions>
+      <version>0.9.5.1-modaclouds</version>
+    </versions>
+    <lastUpdated>20150519153426</lastUpdated>
+  </versioning>
+</metadata>
