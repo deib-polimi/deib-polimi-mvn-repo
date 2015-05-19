@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.deib</groupId>
+  <artifactId>rsp-services-api</artifactId>
+  <versioning>
+    <release>0.4.6-modaclouds</release>
+    <versions>
+      <version>0.4.6-modaclouds</version>
+    </versions>
+    <lastUpdated>20150519154344</lastUpdated>
+  </versioning>
+</metadata>
