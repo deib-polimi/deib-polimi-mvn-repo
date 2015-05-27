@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2014 Politecnico di Milano (marco.miglierina@polimi.it)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>it.polimi.tower4clouds</groupId>
+		<artifactId>rdf-history-db</artifactId>
+		<version>0.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>rdf-history-db-main</artifactId>
+	<name>MODAClouds - Tower4Clouds - RDF History DB</name>
+
+	<properties>
+		<dist.file.name>tower4clouds-rdf-history-db</dist.file.name>
+		<main.class>it.polimi.tower4clouds.rdf_history_db.Main</main.class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>it.polimi.tower4clouds</groupId>
+			<artifactId>rdf-history-db-manager</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polimi.tower4clouds</groupId>
+			<artifactId>rdf-history-db-observer</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${main.class}</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>jar-with-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<archive>
+								<manifest>
+									<mainClass>${main.class}</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</execution>
+					<execution>
+						<id>make-archives</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/main/assembly/dist.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>rpm-maven-plugin</artifactId>
+				<version>2.1.3</version>
+				<executions>
+					<execution>
+						<id>generate-rpm</id>
+						<goals>
+							<goal>rpm</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<distribution>tower4clouds</distribution>
+					<group>System Environment/Daemons</group>
+					<prefix>/usr/local</prefix>
+					<mappings>
+						<mapping>
+							<directory>/usr/local/lib/${dist.file.name}</directory>
+							<filemode>644</filemode>
+							<username>root</username>
+							<groupname>root</groupname>
+							<sources>
+								<source>
+									<location>target/${project.artifactId}-${project.version}-jar-with-dependencies.jar</location>
+								</source>
+							</sources>
+						</mapping>
+						<mapping>
+							<directory>/usr/local/bin</directory>
+							<filemode>755</filemode>
+							<username>root</username>
+							<groupname>root</groupname>
+							<sources>
+								<source>
+									<location>${dist.file.name}-rpm</location>
+									<destination>${dist.file.name}</destination>
+								</source>
+							</sources>
+						</mapping>
+					</mappings>
+					<requires>
+						<require>mosaic-rt-jre-7</require>
+					</requires>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
