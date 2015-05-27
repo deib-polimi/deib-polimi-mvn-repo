@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.tower4clouds</groupId>
+  <artifactId>rdf-history-db-manager</artifactId>
+  <versioning>
+    <versions>
+      <version>0.2-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150527104745</lastUpdated>
+  </versioning>
+</metadata>
