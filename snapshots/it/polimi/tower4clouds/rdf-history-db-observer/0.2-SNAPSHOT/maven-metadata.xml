@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>it.polimi.tower4clouds</groupId>
+  <artifactId>rdf-history-db-observer</artifactId>
+  <version>0.2-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150527.104749</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20150527104749</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.2-20150527.104749-1</value>
+        <updated>20150527104749</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.2-20150527.104749-1</value>
+        <updated>20150527104749</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
