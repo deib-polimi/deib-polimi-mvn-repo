@@ -1,0 +1,331 @@
+<!--
+
+    Copyright 2013 deib-polimi
+    Contact: deib-polimi <marco.miglierina@polimi.it>
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.polimi.modaclouds.cpimlibrary</groupId>
+	<artifactId>cpim-library</artifactId>
+	<version>2.0-SNAPSHOT</version>
+
+	<inceptionYear>2013</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<repositories>
+		<!-- Spy repo for: memcached -->
+		<repository>
+			<id>spy</id>
+			<name>Spy Repository</name>
+			<layout>default</layout>
+			<url>http://files.couchbase.com/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- DEIB github repo -->
+		<repository>
+			<id>deib-polimi-releases</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/releases</url>
+		</repository>
+		<repository>
+			<id>deib-polimi-snapshots</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- local repo for: TODO move to deib repo ?
+				- om.microsoft.azure.sqljdbc4
+				- com.microsoft.azure.helper (jpa4azure without jpa)
+				- kundera-azure-table
+				- kundera-gae-datastore
+		-->
+		<repository>
+			<id>project.local</id>
+			<name>project</name>
+			<url>file:${project.basedir}/repo</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>internal-repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>internal-snapshot-repo</id>
+			<name>Temporary Staging Snapshot Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<properties>
+		<appengine.version>1.8.8</appengine.version>
+		<azure.version>0.4.6</azure.version>
+		<aws.version>1.6.5</aws.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<github.global.server>github</github.global.server>
+		<github.repository.name>modaclouds-cpim-library</github.repository.name>
+		<github.user.name>deib-polimi</github.user.name>
+	</properties>
+
+	<dependencies>
+		<!-- Google App Engine -->
+		<dependency>
+			<groupId>com.google.appengine</groupId>
+			<artifactId>appengine-api-1.0-sdk</artifactId>
+			<version>${appengine.version}</version>
+		</dependency>
+
+		<!-- Windows Azure -->
+		<dependency>
+			<groupId>com.microsoft.windowsazure</groupId>
+			<artifactId>microsoft-windowsazure-api</artifactId>
+			<version>${azure.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>helper</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<!-- Amazon AWS -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>${aws.version}</version>
+		</dependency>
+
+		<!-- JDO (for NoSQL service) -->
+		<dependency>
+			<groupId>javax.jdo</groupId>
+			<artifactId>jdo2-api</artifactId>
+			<version>2.3-eb</version>
+		</dependency>
+
+		<!-- Hegira client (for NoSQL service) -->
+		<dependency>
+			<groupId>it.polimi.hegira</groupId>
+			<artifactId>zkWrapper-client</artifactId>
+			<version>0.0.4-SNAPSHOT</version>
+		</dependency>
+
+		<!-- memcached (for memcache service)-->
+		<dependency>
+			<groupId>spy</groupId>
+			<artifactId>spymemcached</artifactId>
+			<version>2.8.1</version>
+		</dependency>
+
+		<!-- mysql connector (for SQL service on GAE and AWS) -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
+		<!-- SQL connector (for SQL service on Azure) -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
+		</dependency>
+
+		<!-- (? probably needed for Azure) -->
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+
+		<!-- Javax -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
+
+		<!-- Apache commons -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.impetus.kundera.client</groupId>
+			<artifactId>kundera-gae-datastore</artifactId>
+			<version>2.15</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<header>${project.basedir}/APACHE-2-header.txt</header>
+					<properties>
+						<organization>deib-polimi</organization>
+						<year>${project.inceptionYear}</year>
+						<owner>deib-polimi</owner>
+						<email>marco.miglierina@polimi.it</email>
+						<artid>${project.artifactId}</artid>
+					</properties>
+					<excludes>
+						<exclude>**/README</exclude>
+						<exclude>*.log</exclude>
+						<exclude>src/test/resources/**</exclude>
+						<exclude>src/main/resources/**</exclude>
+						<exclude>LICENSE.txt</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>analyze</id>
+						<phase>install</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.2.201409121644</version>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.10</version>
+				<configuration>
+					<merge>true</merge> <!-- deploy without removing existing artifacts on the repo -->
+					<message>Maven artifacts for ${project.artifactId}
+						${project.version}</message>  <!-- git commit message -->
+					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/master</branch>                       <!-- remote branch name -->
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<repositoryName>deib-polimi-mvn-repo</repositoryName>      <!-- github repo name -->
+					<repositoryOwner>deib-polimi</repositoryOwner>    <!-- github username -->
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal
+						'deploy' phase -->
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
