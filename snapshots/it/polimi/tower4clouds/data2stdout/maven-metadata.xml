@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.tower4clouds</groupId>
+  <artifactId>data2stdout</artifactId>
+  <versioning>
+    <versions>
+      <version>0.2-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20150602144030</lastUpdated>
+  </versioning>
+</metadata>
