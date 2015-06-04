@@ -3,10 +3,10 @@
   <groupId>polimi.deib</groupId>
   <artifactId>rsp-services-csparql</artifactId>
   <versioning>
-    <release>0.4.8-modaclouds</release>
+    <release>0.4.8.1-modaclouds</release>
     <versions>
-      <version>0.4.8-modaclouds</version>
+      <version>0.4.8.1-modaclouds</version>
     </versions>
-    <lastUpdated>20150519154037</lastUpdated>
+    <lastUpdated>20150604110939</lastUpdated>
   </versioning>
 </metadata>
