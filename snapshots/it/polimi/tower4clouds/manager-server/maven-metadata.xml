@@ -4,8 +4,8 @@
   <artifactId>manager-server</artifactId>
   <versioning>
     <versions>
-      <version>0.2-SNAPSHOT</version>
+      <version>0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150605175546</lastUpdated>
+    <lastUpdated>20150918123741</lastUpdated>
   </versioning>
 </metadata>
