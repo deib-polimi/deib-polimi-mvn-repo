@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2014 Politecnico di Milano (marco.miglierina@polimi.it)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.polimi.tower4clouds</groupId>
+	<version>0.4-SNAPSHOT</version>
+	<artifactId>tower4clouds</artifactId>
+	<packaging>pom</packaging>
+	<name>MODAClous - Tower4Clouds - Parent Pom</name>
+	<inceptionYear>2014</inceptionYear>
+	<description>Tower4Clouds</description>
+	<url>http://deib-polimi.github.io/tower4clouds</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<github.global.server>github</github.global.server>
+		<slf4j.version>1.7.12</slf4j.version>
+	</properties>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Politecnico di Milano</name>
+		<url>http://www.polimi.it</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>mmiglier</id>
+			<name>Marco Miglierina</name>
+			<email>marco.miglierina@polimi.it</email>
+			<organization>Politecnico di Milano</organization>
+			<organizationUrl>http://www.polimi.it</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Rome</timezone>
+		</developer>
+	</developers>
+
+	<contributors>
+	<!-- to add: Balduini, Guerriero, Mattioli, Lisa -->
+		<contributor>
+			<name>Riccardo Benito Desantis</name>
+			<email>riccardobenito.desantis@polimi.it</email>
+			<organization>Politecnico di Milano</organization>
+			<organizationUrl>http://www.polimi.it</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Rome</timezone>
+		</contributor>
+		<contributor>
+			<name>Leonardo Cella</name>
+			<email>leonardo.cella@mail.polimi.it</email>
+			<organization>Politecnico di Milano</organization>
+			<organizationUrl>http://www.polimi.it</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Rome</timezone>
+		</contributor>
+                <contributor>
+			<name>Davide Verzotto</name>
+			<email>davide.verzotto@mail.polimi.it</email>
+			<organization>Politecnico di Milano</organization>
+			<organizationUrl>http://www.polimi.it</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Rome</timezone>
+		</contributor>
+	</contributors>
+
+	<scm>
+		<connection>scm:git:git@github.com:deib-polimi/tower4clouds.git</connection>
+		<developerConnection>scm:git:git@github.com:deib-polimi/tower4clouds.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/deib-polimi/tower4clouds</url>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/deib-polimi/tower4clouds/issues</url>
+	</issueManagement>
+
+	<repositories>
+		<repository>
+			<id>streamreasoning_repository</id>
+			<name>Csparql server repository</name>
+			<url>http://streamreasoning.org/maven/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>maven-restlet</id>
+			<name>Public online Restlet repository</name>
+			<url>http://maven.restlet.com</url>
+		</repository>
+		<repository>
+			<id>deib-polimi-releases</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/releases</url>
+		</repository>
+		<repository>
+			<id>deib-polimi-snapshots</id>
+			<url>https://github.com/deib-polimi/deib-polimi-mvn-repo/raw/master/snapshots</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>internal-repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>internal-snapshot-repo</id>
+			<name>Temporary Staging Snapshot Repository</name>
+			<url>file://${project.build.directory}/mvn-repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<modules>
+		<module>data-analyzer</module>
+		<module>manager</module>
+		<module>rules</module>
+		<module>model</module>
+		<module>data-collectors</module>
+		<module>integration</module>
+		<module>use-cases</module>
+		<module>common</module>
+		<module>observers</module>
+		<module>data-collector-library</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>1.1.3</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.beust</groupId>
+				<artifactId>jcommander</artifactId>
+				<version>1.30</version>
+			</dependency>
+			<dependency>
+				<groupId>it.polimi.deib</groupId>
+				<artifactId>rsp-services-api</artifactId>
+				<version>0.4.6-modaclouds</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-log4j12</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>it.polimi.csparqool</groupId>
+				<artifactId>csparqool</artifactId>
+				<version>1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>it.polimi.modaclouds.qos-models</groupId>
+				<artifactId>qos-models</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.jena</groupId>
+				<artifactId>jena-core</artifactId>
+				<version>2.11.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>1.3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.9.1</version>
+			</dependency>
+			<dependency>
+				<groupId>
+				it.polimi.modaclouds.monitoring.knowledge-base-api
+			</groupId>
+				<artifactId>knowledge-base-api</artifactId>
+				<version>2.4.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.restlet.jse</groupId>
+				<artifactId>org.restlet</artifactId>
+				<version>2.3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.restlet.jse</groupId>
+				<artifactId>org.restlet.ext.jaxb</artifactId>
+				<version>2.3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.restlet.jee</groupId>
+				<artifactId>org.restlet.ext.slf4j</artifactId>
+				<version>2.3.2</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>slf4j-api</artifactId>
+						<groupId>org.slf4j</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.5.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9.1</version>
+					<configuration>
+						<aggregate>true</aggregate>
+						<show>public</show>
+						<nohelp>true</nohelp>
+						<header>${project.artifactId}, ${project.version}</header>
+						<footer>${project.artifactId}, ${project.version}</footer>
+						<doctitle>${project.artifactId}, ${project.version}</doctitle>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.2</version>
+					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<tagNameFormat>v@{project.version}</tagNameFormat>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>aspectj-maven-plugin</artifactId>
+					<version>1.7</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>compile</goal>
+								<goal>test-compile</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<complianceLevel>1.7</complianceLevel>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>enforce-versions</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<bannedDependencies>
+									<excludes>
+										<exclude>commons-logging:commons-logging</exclude>
+										<exclude>commons-logging:commons-logging-api</exclude>
+										<exclude>log4j:log4j</exclude>
+									</excludes>
+								</bannedDependencies>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.11</version>
+				<inherited>false</inherited>
+				<configuration>
+					<aggregate>true</aggregate>
+					<header>NOTICE</header>
+					<properties>
+						<owner>Politecnico di Milano</owner>
+						<email>marco.miglierina@polimi.it</email>
+					</properties>
+					<mapping>
+						<g4>JAVADOC_STYLE</g4>
+						<tex>PERCENT3_STYLE</tex>
+					</mapping>
+					<excludes>
+						<exclude>**/*.md</exclude>
+						<exclude>**/README*</exclude>
+						<exclude>**/*.log</exclude>
+						<exclude>**/src/test/resources/**</exclude>
+						<exclude>**/src/main/resources/**</exclude>
+						<exclude>LICENSE*</exclude>
+						<exclude>**/.*</exclude>
+						<exclude>**/.*/**/*.*</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>check-headers</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<merge>true</merge>
+					<message>Maven artifacts for ${project.artifactId}
+						${project.version}</message>
+					<noJekyll>true</noJekyll>
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+					<branch>refs/heads/master</branch>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<repositoryName>deib-polimi-mvn-repo</repositoryName>
+					<repositoryOwner>deib-polimi</repositoryOwner>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<!-- <profiles> NOT WORKING. IT RAISED NULL POINTER EXCEPTION. The release on github was touched, but no files were uploaded, probably something wwrong with the file list (to be fixed)
+		<profile>
+			<id>github-release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>de.jutzig</groupId>
+						<artifactId>github-release-plugin</artifactId>
+						<version>1.1.1</version>
+						<inherited>false</inherited>
+						<configuration>
+							<description>See the
+								[Changelog](https://github.com/deib-polimi/tower4clouds/blob/master/CHANGELOG.md)</description>
+							<releaseName>v${project.version}</releaseName>
+							<tag>v${project.version}</tag>
+							<fileSet>
+								<includes>
+									<include>**/target/**/*.rpm</include>
+									<include>**/target/*.tar.gz</include>
+									<include>**/target/*.zip</include>
+									<include>rules/target/rules-*-jar-with-dependencies.jar</include>
+								</includes>
+							</fileSet>
+						</configuration>
+						<executions>
+							<execution>
+								<id>github-upload</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>release</goal>
+								</goals>
+								<inherited>false</inherited>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles> -->
+</project>
