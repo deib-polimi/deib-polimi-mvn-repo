@@ -4,8 +4,8 @@
   <artifactId>data-collector-library</artifactId>
   <versioning>
     <versions>
-      <version>0.3-SNAPSHOT</version>
+      <version>0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150615143416</lastUpdated>
+    <lastUpdated>20150918123419</lastUpdated>
   </versioning>
 </metadata>
