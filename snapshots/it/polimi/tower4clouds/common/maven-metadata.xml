@@ -4,8 +4,8 @@
   <artifactId>common</artifactId>
   <versioning>
     <versions>
-      <version>0.3-SNAPSHOT</version>
+      <version>0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150615143517</lastUpdated>
+    <lastUpdated>20150918122820</lastUpdated>
   </versioning>
 </metadata>
