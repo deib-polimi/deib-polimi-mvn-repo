@@ -4,8 +4,8 @@
   <artifactId>manager-api</artifactId>
   <versioning>
     <versions>
-      <version>0.2-SNAPSHOT</version>
+      <version>0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150605175141</lastUpdated>
+    <lastUpdated>20150918123333</lastUpdated>
   </versioning>
 </metadata>
