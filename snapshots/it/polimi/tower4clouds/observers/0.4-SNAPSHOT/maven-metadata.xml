@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>it.polimi.tower4clouds</groupId>
+  <artifactId>observers</artifactId>
+  <version>0.4-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150918.123057</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20150918123057</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.4-20150918.123057-1</value>
+        <updated>20150918123057</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
