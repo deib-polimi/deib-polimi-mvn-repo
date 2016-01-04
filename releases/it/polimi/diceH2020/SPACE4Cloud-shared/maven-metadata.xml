@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>it.polimi.diceH2020</groupId>
+  <artifactId>SPACE4Cloud-shared</artifactId>
+  <versioning>
+    <release>0.0.1-RELEASE</release>
+    <versions>
+      <version>0.0.1-RELEASE</version>
+    </versions>
+    <lastUpdated>20160104145658</lastUpdated>
+  </versioning>
+</metadata>
