@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>commons-transaction</groupId>
+  <artifactId>commons-transaction</artifactId>
+  <versioning>
+    <versions>
+      <version>1.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160307085522</lastUpdated>
+  </versioning>
+</metadata>
