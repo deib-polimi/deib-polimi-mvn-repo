@@ -4,8 +4,8 @@
   <artifactId>SPACE4Cloud-shared</artifactId>
   <versioning>
     <versions>
-      <version>0.2.8-SNAPSHOT</version>
+      <version>0.2.9-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160908102916</lastUpdated>
+    <lastUpdated>20160910192725</lastUpdated>
   </versioning>
 </metadata>
