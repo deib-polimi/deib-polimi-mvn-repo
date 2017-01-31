@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>it.polimi.diceH2020</groupId>
+  <artifactId>SPACE4Cloud-shared</artifactId>
+  <version>0.2.11-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20170131.153422</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20170131153422</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.2.11-20170131.153422-1</value>
+        <updated>20170131153422</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.2.11-20170131.153422-1</value>
+        <updated>20170131153422</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>0.2.11-20170131.153422-1</value>
+        <updated>20170131153422</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
