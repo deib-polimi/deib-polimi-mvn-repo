@@ -3,10 +3,10 @@
   <groupId>it.polimi.diceH2020</groupId>
   <artifactId>SPACE4Cloud-shared</artifactId>
   <versioning>
-    <release>0.1.4-RELEASE</release>
+    <release>0.3.0-RELEASE</release>
     <versions>
-      <version>0.1.4-RELEASE</version>
+      <version>0.3.0-RELEASE</version>
     </versions>
-    <lastUpdated>20160216134200</lastUpdated>
+    <lastUpdated>20170729163442</lastUpdated>
   </versioning>
 </metadata>
